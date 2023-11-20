@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="OnlineBookShop.Views.Admin.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family:Poppins;
+        }
+        .left{
+            color:white;
+            height:695px;
+            background-color:teal;
+        }
+        label{
+            color:white;
+        }
+        img{
+            width:50px;
+            height: 50px;
+            filter: invert(16%) sepia(61%) saturate(4921%) hue-rotate(355deg) brightness(104%) contrast(131%);
+            cursor: pointer;
+        }
+
+    </style>
+    <link href="../../Assets/Lib/css/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 left">
+                <div style="height:188px">
+                    <img src="../../Assets/Images/shopping_cart_64px.png" id="Logo" />
+                </div>
+                <div class="p-2">
+                    <div class="mb-3">
+                        <img src="../../Assets/Images/book_100px.png" height="20" width="20"/>
+                        <a href="Books.aspx"><label>Books</label></a>
+                    </div>
+                    <div></div>
+                    <div class="mb-3">
+                        <img src="../../Assets/Images/user_typing_using_typewriter_64px.png" height="20" width="20"/>
+                        <a href="Author.aspx"><label>Authors</label></a>
+                    </div>
+                    <div></div>
+                    <div class="mb-3">
+                        <img src="../../Assets/Images/administrator_male_52px.png" height="20" width="20"/>
+                        <a href="Seller.aspx"><label>Sellers</label></a>
+                    </div>
+                    <div></div>
+                    <div class="mb-3">
+                        <img src="../../Assets/Images/categorize_60px.png" height="20" width="20"/>
+                        <a href="Categories.aspx"><label>Categories</label></a>
+                    </div>
+                    <div></div>
+                    <div style="height:126px"></div>
+                    <div class="mb-3">
+                        <img src="../../Assets/Images/home_52px.png" height="20" width="20"/>
+                        <a href="../Login.aspx"><label>Logout</label></a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="col-10">
+                <form id="form1" runat="server">
+                    <div>
+                        <asp:ContentPlaceHolder ID="MyContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
